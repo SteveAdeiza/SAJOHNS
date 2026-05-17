@@ -80,16 +80,17 @@ nav a{
 .btn{
     display:inline-block;
     padding:14px 30px;
-    background:#f5b400;
+    background:linear-gradient(45deg,#f5b400,#ffcc33);
     color:#000;
-    border-radius:6px;
+    border-radius:8px;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(245,180,0,0.5);
 }
 
 /* SECTIONS */
@@ -103,7 +104,7 @@ nav a{
     color:#f5b400;
 }
 
-/* ABOUT WITH IMAGE */
+/* ABOUT */
 .about-container{
     display:flex;
     align-items:center;
@@ -119,6 +120,34 @@ nav a{
     width:100%;
     max-width:400px;
     border-radius:15px;
+}
+
+/* CEO SECTION */
+.ceo-section{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.ceo-img img{
+    width:280px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+.ceo-text{
+    flex:1;
+}
+
+.ceo-text h3{
+    font-size:28px;
+    color:#f5b400;
+}
+
+.ceo-text p{
+    margin-top:10px;
+    line-height:1.6;
 }
 
 /* SERVICES */
@@ -184,10 +213,16 @@ footer{
     margin-top:40px;
 }
 
+/* HIGHLIGHT SECTION */
+.highlight{
+    background:linear-gradient(135deg,#0a1f44,#112b5c);
+}
+
 /* MOBILE */
 @media(max-width:900px){
     .hero{flex-direction:column;}
     .about-container{flex-direction:column;}
+    .ceo-section{flex-direction:column;}
 }
 </style>
 </head>
@@ -196,7 +231,7 @@ footer{
 
 <header>
     <div class="logo">
-        <img src="SAJOHNS_Logo.webp" alt="SAJOHNS Logo">
+        <img src="images/SAJOHNS_Logo.webp" alt="SAJOHNS Logo" loading="lazy">
     </div>
     <nav>
         <a href="#about">About</a>
@@ -214,7 +249,7 @@ footer{
     </div>
 
     <div class="hero-img">
-        <img src="SAJOHNS_Hero.webp" alt="Students learning">
+        <img src="images/SAJOHNS_Hero.webp" alt="Students learning" loading="lazy">
     </div>
 </section>
 
@@ -228,7 +263,28 @@ footer{
         </div>
 
         <div class="about-img">
-            <img src="SAJOHNS_Flyer.webp" alt="About Sajohns">
+            <img src="images/SAJOHNS_Flyer.webp" alt="Company flyer" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- CEO -->
+<section class="section highlight">
+    <h2>Meet The CEO</h2>
+
+    <div class="ceo-section">
+        <div class="ceo-img">
+            <img src="images/SAJOHNS_CEO.webp" alt="CEO John Oyilom Ogli" loading="lazy">
+        </div>
+
+        <div class="ceo-text">
+            <h3>John Oyilom Ogli</h3>
+            <p><strong>CEO / Consultant</strong></p>
+            <p>
+                A visionary educational consultant dedicated to transforming learning experiences.
+                With years of expertise in academic coaching, institutional development, and global
+                student placement, he has helped countless students and schools achieve excellence.
+            </p>
         </div>
     </div>
 </section>
